@@ -1852,3 +1852,7 @@ html.dark .fx-glow {
     opacity: .8;
     background: radial-gradient(circle, rgba(93, 123, 255, .9), transparent 65%)
 }
+
+@media (hover: none), (pointer: coarse), (max-width: 767px) {
+    .fx-glow { display: none !important }
+}
