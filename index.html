@@ -232,8 +232,10 @@
                         <div class="tags"><span>Каталог</span><span>Обратная связь</span><span>Минимализм</span></div>
                         <a class="case-btn" href="https://kakugoo.github.io/steptour/" target="_blank" rel="noopener">Смотреть сайт <span>↗</span></a>
                 </div>
-                    <div class="ph"><img data-plx src="img/Steptour.png" alt="Step.Tour — лендинг тур-агентства"
+                <a href="https://kakugoo.github.io/steptour/" target="_blank">
+                    <div class="ph"><img data-plx src="img/steptour.png" alt="Step.Tour — лендинг тур-агентства"
                         loading="lazy"></div>
+                </a>
             </article>
 
             <article class="case reveal">
@@ -700,6 +702,24 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
     <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a2327dadbecd1d48',t:'MTc4NTM5NDg3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2348646d9de9a9d',t:'MTc4NTQxNjE5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+    <script>
+    /* ===== soft cursor glow ===== */
+    (function () {
+        if (!matchMedia('(pointer:fine)').matches) return;
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const glow = document.createElement('div');
+        glow.className = 'fx-el fx-glow';
+        document.body.appendChild(glow);
+        let mx = innerWidth / 2, my = innerHeight / 2, gx = mx, gy = my;
+        addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, {passive: true});
+        (function loop() {
+            gx += (mx - gx) * .08; gy += (my - gy) * .08;
+            glow.style.transform = `translate(${gx}px,${gy}px) translate(-50%,-50%)`;
+            requestAnimationFrame(loop);
+        })();
+    })();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a23545683bfd667f',t:'MTc4NTQyNDAyNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
