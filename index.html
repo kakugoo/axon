@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXON — делаем сайты, которые продают</title>
+    <meta name="description"
+        content="Студия веб-разработки AXON. Лендинги, корпоративные сайты и интернет-магазины: от первого созвона до запуска за 5–21 день.">
+    <script>try { var _t = localStorage.getItem('factura-theme'); if (_t === 'dark' || (!_t && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark') } catch (e) { }</script>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23101010'/><text x='50' y='68' font-size='58' text-anchor='middle' font-family='Arial Black' fill='%23f2f0ea'>A</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="progress"></div>
+
+    <header id="header">
+        <div class="wrap nav">
+            <a href="#" class="logo"><b>A</b>AXON</a>
+            <nav class="nav-links">
+                <a href="#services">Услуги</a>
+                <a href="#cases">Кейсы</a>
+                <a href="#calc">Калькулятор</a>
+                <a href="#pricing">Тарифы</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div class="nav-right">
+                <button id="themeToggle" type="button" aria-label="Переключить тему" title="Светлая / тёмная тема">
+                    <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round">
+                        <circle cx="12" cy="12" r="4.2" />
+                        <path
+                            d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7" />
+                    </svg>
+                    <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5 7 7 0 0 0 20.5 14.5z" />
+                    </svg>
+                </button>
+                <a href="#contact" class="btn btn-sm">Обсудить проект</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" style="padding-bottom:0">
+        <div class="wrap">
+            <div class="hero-grid">
+                <div>
+                    <span class="chip reveal"><span class="dot"></span>Студия веб-разработки · Москва</span>
+                    <h1 class="reveal">Делаем сайты,<br>которые <span class="rot-box"><em
+                                id="rotWord">продают</em></span></h1>
+                    <p class="sub reveal">Студия AXON проектирует и разрабатывает лендинги, корпоративные сайты и
+                        интернет-магазины. От первого созвона до запуска — 5–21 день, показ прогресса каждые два дня.
+                    </p>
+                    <div class="hero-cta reveal">
+                        <a href="#calc" class="btn">Рассчитать стоимость ↓</a>
+                        <a href="#cases" class="btn btn-line">Смотреть кейсы</a>
+                    </div>
+                    <div class="hero-meta reveal">
+                        <span><b><span data-count="20">0</span>+</b> проектов</span>
+                        <span><b><span data-count="7">0</span> дней</b> — средний срок запуска</span>
+                        <span><b><span data-count="2">0</span> года</b> опыта</span>
+                        <span><b><span data-count="98">0</span>%</b> клиентов рекомендуют нас</span>
+                    </div>
+                </div>
+                <div class="collage reveal" aria-hidden="true">
+                    <img class="c1" src="img/Kross.jpeg" alt="">
+                    <img class="c2" src="img/Flowbase.jpeg" alt="">
+                    <div class="float-chip fc1"><span class="ic">★</span><span>+63% конверсии<small>KROSS — после
+                                редизайна</small></span></div>
+                    <div class="float-chip fc2"><span class="ic">⚡</span><span>Запуск за 14 дней<small>сроки фиксируем</small></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Лендинги <i>✦</i> Интернет-магазины <i>✦</i> Корпоративные сайты <i>✦</i> Веб-приложения <i>✦</i>
+                    Подписка на ведение <i>✦</i> Поддержка и развитие <i>✦</i>&nbsp;</span>
+                <span>Лендинги <i>✦</i> Интернет-магазины <i>✦</i> Корпоративные сайты <i>✦</i> Веб-приложения <i>✦</i>
+                    Подписка на ведение <i>✦</i> Поддержка и развитие <i>✦</i>&nbsp;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div>
+                    <div class="sec-label"><span class="n">01</span><span class="t">Что мы делаем</span></div>
+                    <h2>Полный цикл: от структуры до первых заявок</h2>
+                </div>
+                <p>Стратегия, дизайн, разработка и аналитика в одной команде — без цепочки субподрядчиков.</p>
+            </div>
+            <div class="svc-grid">
+                <div class="tile reveal">
+                    <span class="n">/01</span>
+                    <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M13 2L4.5 13.5H11L9.5 22 19.5 9.5H12.5L13 2z" />
+                        </svg></span>
+                    <h3>Лендинги</h3>
+                    <p>Одностраничные сайты, где каждый экран ведёт к заявке: сильная структура, дизайн и скорость.</p>
+                    <div class="price">от 45 000 ₽ · 5-7 дней</div>
+                </div>
+                <div class="tile reveal">
+                    <span class="n">/02</span>
+                    <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <rect x="3" y="4" width="18" height="14" rx="2" />
+                            <path d="M3 9h18M8 21h8" />
+                        </svg></span>
+                    <h3>Корпоративные сайты</h3>
+                    <p>Многостраничные сайты компаний: услуги, кейсы, блог и структура, в которой легко расти.</p>
+                    <div class="price">от 85 000 ₽ · 10-20 дней</div>
+                </div>
+                <div class="tile reveal">
+                    <span class="n">/03</span>
+                    <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <circle cx="9" cy="20" r="1.6" />
+                            <circle cx="17" cy="20" r="1.6" />
+                            <path d="M2 3h3l2.6 12.5h11L21 7H6" />
+                        </svg></span>
+                    <h3>Интернет-магазины</h3>
+                    <p>Каталог, корзина, оплата и доставка. Интеграции со складом и CRM уже в базовой сборке.</p>
+                    <div class="price">от 145 000 ₽ · 14-21 дней</div>
+                </div>
+                <div class="tile reveal">
+                    <span class="n">/04</span>
+                    <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                            <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                            <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                        </svg></span>
+                    <h3>Веб-приложения</h3>
+                    <p>Личные кабинеты, админ-панели и внутренние инструменты, которыми приятно пользоваться.</p>
+                    <div class="price">от 180 000 ₽ · от 20-30 дней</div>
+                </div>
+                <div class="tile reveal">
+                    <span class="n">/05</span>
+                    <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg></span>
+                    <h3>Поддержка и развитие</h3>
+                    <p>Аналитика, A/B-тесты и доработки: сайт не стареет, а растёт вместе с бизнесом.</p>
+                    <div class="price">от 7 500 ₽/мес</div>
+                </div>
+                <div class="tile reveal">
+                    <span class="n">/06</span>
+                    <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M21 12a9 9 0 11-2.64-6.36" />
+                            <path d="M21 3v6h-6" />
+                        </svg></span>
+                    <h3>Подписка на ведение сайта</h3>
+                    <p>Для сайтов, где нужны постоянные обновления: товары, новости, акции и статьи — вносим всё сами,
+                        без вашего участия.</p>
+                    <div class="price">15 000 ₽/мес</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section style="padding-top:0">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div>
+                    <div class="sec-label"><span class="n">02</span><span class="t">Почему мы</span></div>
+                    <h2>Разница, которую видно в процессе</h2>
+                </div>
+                <p>Мы построили работу так, чтобы исключить всё, что обычно раздражает в подрядчиках.</p>
+            </div>
+            <div class="compare">
+                <div class="cmp bad reveal">
+                    <h3>Как обычно бывает</h3>
+                    <ul>
+                        <li><span class="mk">✕</span>Подрядчик пропадает на неделю без вести</li>
+                        <li><span class="mk">✕</span>Сроки «ну скоро», а в договоре туман</li>
+                        <li><span class="mk">✕</span>Дизайн — шаблон, как у всех конкурентов</li>
+                        <li><span class="mk">✕</span>Сдал сайт — и исчез навсегда</li>
+                        <li><span class="mk">✕</span>Доступы регистрирует на себя</li>
+                    </ul>
+                </div>
+                <div class="cmp good reveal">
+                    <h3>Как работаем мы</h3>
+                    <ul>
+                        <li><span class="mk">✓</span>Показ прогресса каждые два дня</li>
+                        <li><span class="mk">✓</span>Срок и цена зафиксированы</li>
+                        <li><span class="mk">✓</span>Индивидуальный дизайн под ваш бренд</li>
+                        <li><span class="mk">✓</span>Месяц поддержки после запуска — в подарок</li>
+                        <li><span class="mk">✓</span>Все доступы и исходники — только ваши</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div>
+                    <div class="sec-label"><span class="n">03</span><span class="t">Проекты</span></div>
+                    <h2>Кейсы с цифрами после запуска</h2>
+                </div>
+                <p>Красивый сайт — это базовое ожидание. Ниже — что изменилось в бизнесе клиентов.</p>
+            </div>
+
+            <article class="case reveal">
+                <div class="info">
+                    <a href="https://kakugoo.github.io/steptour/" target="_blank">
+                        <span class="idx">01 — Тур-агентство</span>
+                        <h3>Step.Tour — лендинг тур-агентства</h3>
+                        <p class="desc">Бренд хотел лендинг уровня крупных тур-операторов: собрали каталог распространенных направлений,
+                            онлайн-форму для быстрой заявки, упаковав всё в минималистичный и аккуратный дизайн.</p>
+                        <div class="metrics"><span><b>+51%</b>конверсии</span><span><b>10</b>новых клиентов за 1-й
+                                месяц</span></div>
+                        <div class="tags"><span>Каталог</span><span>Обратная связь</span><span>Минимализм</span></div>
+                    </a>
+                </div>
+                <a href="https://kakugoo.github.io/steptour/" target="_blank">
+                    <div class="ph"><img data-plx src="img/steptour.png" alt="KROSS — интернет-магазин кроссовок"
+                        loading="lazy"></div>
+                </a>
+            </article>
+
+            <article class="case reveal">
+                <div class="info">
+                    <span class="idx">02 — Финтех</span>
+                    <h3>NORD PAY — лендинг финтех-сервиса</h3>
+                    <p class="desc">Сложный продукт нужно было объяснить за один экран. Сделали лендинг с калькулятором
+                        выгоды, живой демо-версией и сценариями под разную аудиторию.</p>
+                    <div class="metrics"><span><b>22 400</b>заявок за квартал</span><span><b>11,8%</b>конверсия в
+                            заявку</span></div>
+                    <div class="tags"><span>Лендинг</span><span>Калькулятор</span><span>Демо продукта</span></div>
+                </div>
+                <div class="ph"><img data-plx src="img/AeroBank.jpeg" alt="NORD PAY — финтех-лендинг" loading="lazy">
+                </div>
+            </article>
+
+            <article class="case reveal">
+                <div class="info">
+                    <span class="idx">03 — HoReCa</span>
+                    <h3>TERRA — сайт ресторана</h3>
+                    <p class="desc">Задача — передать атмосферу места и перевести гостей из соцсетей в бронирование.
+                        Элегантный дизайн, гастросъёмка и бронирование в два клика.</p>
+                    <div class="metrics"><span><b>x2</b>больше бронирований</span><span><b>+18%</b>к среднему
+                            чеку</span></div>
+                    <div class="tags"><span>Брендинг</span><span>Бронирование</span><span>Меню</span></div>
+                </div>
+                <div class="ph"><img data-plx src="img/TErra.jpeg" alt="TERRA — сайт ресторана" loading="lazy"></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section id="calc" style="padding-top:0">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div>
+                    <div class="sec-label"><span class="n">04</span><span class="t">Калькулятор</span></div>
+                    <h2>Прикиньте бюджет <em>прямо сейчас</em></h2>
+                </div>
+                <p>Подвигайте параметры — цена и срок пересчитаются мгновенно. Точную смету пришлём после короткого
+                    брифа.</p>
+            </div>
+            <div class="calc-card reveal">
+                <div class="calc-left">
+                    <div class="calc-group">
+                        <span class="calc-label">Тип сайта</span>
+                        <div class="pills" id="typePills">
+                            <button type="button" class="pill active" data-type="landing">Лендинг</button>
+                            <button type="button" class="pill" data-type="multi">Многостраничный</button>
+                            <button type="button" class="pill" data-type="shop">E-commerce</button>
+                        </div>
+                    </div>
+                    <div class="calc-group off" id="pagesGroup">
+                        <div class="calc-label-row"><span class="calc-label">Количество страниц</span><b
+                                id="pagesVal">5</b></div>
+                        <input type="range" id="pages" min="3" max="15" value="5" step="1">
+                        <div class="range-scale"><span>3</span><span>15</span></div>
+                    </div>
+                    <div class="calc-group">
+                        <span class="calc-label">Дополнительно</span>
+                        <div class="checks" id="calcExtras">
+                            <label class="check"><input type="checkbox" data-extra="7000"><i></i>Сложные анимации<b>+7
+                                    000 ₽</b></label>
+                            <label class="check"><input type="checkbox" data-extra="5000"><i></i>Второй язык<b>+5 000
+                                    ₽</b></label>
+                            <label class="check"><input type="checkbox" data-extra="9000"><i></i>Расширенное SEO<b>+9
+                                    000 ₽</b></label>
+                            <label class="check wide"><input type="checkbox" id="urgent"><i></i>Срочный запуск<b>×1,3 к
+                                    цене · -30% к сроку</b></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-right">
+                    <span class="calc-label">Ориентировочная стоимость</span>
+                    <div class="calc-price" id="calcPrice">45 000 ₽</div>
+                    <div class="calc-days">Срок: <b id="calcDays">7–10 дней</b></div>
+                    <ul class="calc-includes" id="calcIncludes"></ul>
+                    <a href="#contact" class="btn" id="calcCta">Обсудить проект ↗</a>
+                    <p class="calc-note">Это оценка, а не счёт: финальную цену обговариваем лично.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section>
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div>
+                    <div class="sec-label"><span class="n">05</span><span class="t">Процесс</span></div>
+                    <h2>Четыре понятных этапа</h2>
+                </div>
+                <p>Линия ниже заполняется по мере того, как вы листаете — так же наполняется и ваш проект.</p>
+            </div>
+            <div class="steps-wrap" id="stepsWrap">
+                <div class="steps-line"><i></i></div>
+                <div class="steps">
+                    <div class="step"><span class="dotc"></span>
+                        <div class="card"><span class="n">Этап 01</span>
+                            <h3>Погружение</h3>
+                            <p>Изучаем бизнес, конкурентов и аудиторию. Формулируем цель сайта в одном предложении.</p>
+                            <span class="d">1–2 день</span>
+                        </div>
+                    </div>
+                    <div class="step"><span class="dotc"></span>
+                        <div class="card"><span class="n">Этап 02</span>
+                            <h3>Прототип</h3>
+                            <p>Собираем структуру и сценарии. Утверждаем логику до того, как начать рисовать.</p><span
+                                class="d">3–4 день</span>
+                        </div>
+                    </div>
+                    <div class="step"><span class="dotc"></span>
+                        <div class="card"><span class="n">Этап 03</span>
+                            <h3>Дизайн и сборка</h3>
+                            <p>Концепция, все экраны, адаптивы, вёрстка и анимации. Показываем прогресс каждые два дня.
+                            </p><span class="d">5–15 день</span>
+                        </div>
+                    </div>
+                    <div class="step"><span class="dotc"></span>
+                        <div class="card"><span class="n">Этап 04</span>
+                            <h3>Запуск</h3>
+                            <p>Тестируем, публикуем и передаём доступы. Месяц поддержки — в подарок.</p><span
+                                class="d">до 21 дня</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div>
+                    <div class="sec-label"><span class="n">06</span><span class="t">Тарифы</span></div>
+                    <h2>Фикс за проект, без сюрпризов</h2>
+                </div>
+                <p>Кнопка тарифа приведёт к контактам — останется написать пару слов о проекте.</p>
+            </div>
+            <div class="price-grid">
+                <div class="tariff reveal">
+                    <h3>Лендинг</h3>
+                    <div class="sum">45 000 ₽<small> /проект</small></div>
+                    <div class="tm">5-7 дней</div>
+                    <ul>
+                        <li>Прототип и структура под заявку</li>
+                        <li>Индивидуальный дизайн</li>
+                        <li>Адаптив под все устройства</li>
+                        <li>Базовое SEO и аналитика</li>
+                        <li>2 итерации правок</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-line js-plan" data-plan="Лендинг">Выбрать «Лендинг»</a>
+                </div>
+                <div class="tariff hot reveal">
+                    <span class="badge">Выбирают чаще</span>
+                    <h3>Многостраничный</h3>
+                    <div class="sum">85 000 ₽<small> /проект</small></div>
+                    <div class="tm">10-14 дней</div>
+                    <ul>
+                        <li>Всё из тарифа «Лендинг»</li>
+                        <li>До 5 страниц в базе, дальше +6 000 ₽/стр</li>
+                        <li>CMS — правите сами, без разработчика</li>
+                        <li>Анимации и микровзаимодействия</li>
+                        <li>3 итерации правок</li>
+                    </ul>
+                    <a href="#contact" class="btn js-plan" data-plan="Многостраничный">Выбрать «Многостраничный»</a>
+                </div>
+                <div class="tariff reveal">
+                    <h3>E-commerce</h3>
+                    <div class="sum">145 000 ₽<small> /проект</small></div>
+                    <div class="tm">20–30 дней</div>
+                    <ul>
+                        <li>Всё из «Многостраничного»</li>
+                        <li>Каталог, корзина, фильтры</li>
+                        <li>Онлайн-оплата и доставка</li>
+                        <li>Интеграция со складом и CRM</li>
+                        <li>Обучение вашей команды</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-line js-plan" data-plan="E-commerce">Выбрать «E-commerce»</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section style="padding-top:0">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div>
+                    <div class="sec-label"><span class="n">07</span><span class="t">Отзывы</span></div>
+                    <h2>Клиенты — своими словами</h2>
+                </div>
+            </div>
+            <div class="rev-grid">
+                <div class="review reveal">
+                    <div class="stars">★★★★★</div>
+                    <q>Сделали сайт за 12 дней. Заявки выросли в 2,3 раза — впервые не стыдно отправить ссылку
+                        клиенту.</q>
+                    <div class="who"><span class="ava">АК</span>
+                        <div><b>Анна Ковалёва</b><span>основатель MODA ATELIER</span></div>
+                    </div>
+                </div>
+                <div class="review reveal">
+                    <div class="stars">★★★★★</div>
+                    <q>Показ прогресса каждые два дня, сроки соблюдены до дня. Такого на рынке я ещё не встречал.</q>
+                    <div class="who"><span class="ava">ДО</span>
+                        <div><b>Дмитрий Орлов</b><span>CEO NORD PAY</span></div>
+                    </div>
+                </div>
+                <div class="review reveal">
+                    <div class="stars">★★★★★</div>
+                    <q>Конверсия магазина выросла с 1,1% до 1,8%. Разработка окупилась уже в первый месяц.</q>
+                    <div class="who"><span class="ava">ИС</span>
+                        <div><b>Игорь Савин</b><span>основатель KROSS</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="padding-top:0">
+        <div class="wrap">
+            <div class="sec-head reveal" style="display:block;text-align:center">
+                <div class="sec-label" style="justify-content:center"><span class="n">08</span><span
+                        class="t">FAQ</span></div>
+                <h2 style="margin-inline:auto">Частые вопросы</h2>
+            </div>
+            <div class="faq reveal">
+                <details open>
+                    <summary>Когда сайт будет готов?<span class="pl">+</span></summary>
+                    <div class="ans">Лендинг — за 5–7 дней, многостраничный — за 10-14, магазин — за 20–30. Срок
+                        фиксируем сразу, а показ прогресса каждые два дня не даст проекту «зависнуть».</div>
+                </details>
+                <details>
+                    <summary>Что если дизайн не понравится?<span class="pl">+</span></summary>
+                    <div class="ans">Сначала утверждаем концепцию главной страницы и только потом рисуем остальное. Плюс
+                        в каждый тариф включены итерации правок — доводим до результата, который нравится.</div>
+                </details>
+                <details>
+                    <summary>Как устроена оплата?<span class="pl">+</span></summary>
+                    <div class="ans">50% — на старте, 50% — после сдачи.</div>
+                </details>
+                <details>
+                    <summary>Домен, хостинг, доступы — чьи?<span class="pl">+</span></summary>
+                    <div class="ans">Только ваши. Всё регистрируем на вас и передаём в день сдачи вместе с исходниками
+                        макетов. Помогаем выбрать и подключить домен и хостинг (это 3–6 тыс. ₽ в год).</div>
+                </details>
+                <details>
+                    <summary>Что происходит после запуска?<span class="pl">+</span></summary>
+                    <div class="ans">Первый месяц правим и чиним бесплатно. Дальше — поддержка от 7 500 ₽/мес:
+                        доработки, аналитика, A/B-тесты. А если обновления нужны постоянно (товары, новости, акции) —
+                        есть подписка на ведение сайта за 15 000 ₽/мес.</div>
+                </details>
+                <details>
+                    <summary>Берёте ли срочные проекты?<span class="pl">+</span></summary>
+                    <div class="ans">Да, берём вне очереди с коэффициентом x1,3 — тогда сроки сокращаются примерно на
+                        треть. Прикинуть можно в калькуляторе выше.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="padding-top:0">
+        <div class="wrap">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="sec-label"><span class="n">09</span><span class="t">Контакты</span></div>
+                    <h2>Расскажите о задаче — <em>вернёмся с планом</em></h2>
+                    <p class="lead">Пара предложений о проекте — и в течение дня вы получите оценку сроков и стоимости.
+                        Это бесплатно и ни к чему не обязывает.</p>
+                    <div class="c-links">
+                        <a href="https://t.me/factura_web"><span>Telegram — быстрее всего</span>@AXON <span
+                                class="arr">↗</span></a>
+                        <a href="/cdn-cgi/l/email-protection#5e363b3232311e383f3d2a2b2c3f702d2a2b3a3731"><span>Email —
+                                для брифов</span><span class="__cf_email__"
+                                data-cfemail="bbd3ded7d7d4fbdddad8cfcec9da95c8cfcedfd2d4">[email&#160;protected]</span>
+                            <span class="arr">↗</span></a>
+                        <span class="avail"><span class="dot"></span>В этом месяце берём ещё ∞ проектов</span>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <span>© <span id="year">2026</span> AXON — студия веб-разработки</span>
+            <span>Лендинги · Многостраничные · E-commerce</span>
+            <span>Сделано в AXON</span>
+        </div>
+    </footer>
+
+    <button id="toTop" aria-label="Наверх">↑</button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        /* ===== progress bar / header / back-to-top / parallax ===== */
+        const bar = document.getElementById('progress'),
+            header = document.getElementById('header'),
+            toTop = document.getElementById('toTop'),
+            plxImgs = [...document.querySelectorAll('[data-plx]')];
+        function onScroll() {
+            const h = document.documentElement,
+                p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+            bar.style.width = p * 100 + '%';
+            header.classList.toggle('scrolled', h.scrollTop > 10);
+            toTop.classList.toggle('show', h.scrollTop > 600);
+            plxImgs.forEach(img => {
+                const r = img.parentElement.getBoundingClientRect();
+                if (r.bottom < 0 || r.top > innerHeight) return;
+                const f = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+                img.style.transform = `translateY(${f * -34}px)`;
+            });
+        }
+        addEventListener('scroll', onScroll, { passive: true });
+        addEventListener('resize', onScroll);
+        onScroll();
+        toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+
+        /* ===== reveal on scroll ===== */
+        const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }), { threshold: .12 });
+        document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+
+        /* ===== animated counters ===== */
+        const cio = new IntersectionObserver(es => es.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target, end = +el.dataset.count;
+            let t0 = null;
+            const tick = ts => {
+                if (!t0) t0 = ts;
+                const p = Math.min((ts - t0) / 1300, 1);
+                el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+            cio.unobserve(el);
+        }), { threshold: .7 });
+        document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+        /* ===== rotating hero word ===== */
+        const words = ['продают', 'внушают доверие', 'приводят заявки', 'выглядят дорого'],
+            rotEl = document.getElementById('rotWord');
+        let wi = 0;
+        setInterval(() => {
+            rotEl.classList.add('hide');
+            setTimeout(() => {
+                wi = (wi + 1) % words.length;
+                rotEl.textContent = words[wi];
+                rotEl.classList.remove('hide');
+            }, 460);
+        }, 2800);
+
+        /* ===== active nav link ===== */
+        const navLinks = [...document.querySelectorAll('.nav-links a')];
+        const sio = new IntersectionObserver(es => es.forEach(e => {
+            if (!e.isIntersecting) return;
+            const l = navLinks.find(a => a.getAttribute('href') === '#' + e.target.id);
+            if (l) { navLinks.forEach(x => x.classList.remove('act')); l.classList.add('act'); }
+        }), { rootMargin: '-40% 0px -55% 0px' });
+        document.querySelectorAll('section[id]').forEach(s => sio.observe(s));
+
+        /* ===== magnetic buttons (desktop) ===== */
+        if (matchMedia('(pointer:fine)').matches) {
+            document.querySelectorAll('.btn').forEach(b => {
+                b.addEventListener('mousemove', e => {
+                    const r = b.getBoundingClientRect();
+                    b.style.setProperty('--tx', (e.clientX - r.left - r.width / 2) * .18 + 'px');
+                    b.style.setProperty('--ty', (e.clientY - r.top - r.height / 2) * .3 + 'px');
+                });
+                b.addEventListener('mouseleave', () => {
+                    b.style.setProperty('--tx', '0px');
+                    b.style.setProperty('--ty', '0px');
+                });
+            });
+        }
+
+        /* ===== spotlight on service tiles ===== */
+        document.querySelectorAll('.tile').forEach(t => t.addEventListener('mousemove', e => {
+            const r = t.getBoundingClientRect();
+            t.style.setProperty('--sx', (e.clientX - r.left) + 'px');
+            t.style.setProperty('--sy', (e.clientY - r.top) + 'px');
+        }));
+
+        /* ===== process line fill ===== */
+        const stepsIO = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); stepsIO.unobserve(e.target); }
+        }), { threshold: .35 });
+        stepsIO.observe(document.getElementById('stepsWrap'));
+
+        /* ===== CALCULATOR ===== */
+        const BASE = {
+            landing: { p: 45000, min: 7, max: 10, inc: ['1 страница под ключ', 'Прототип и структура', 'Адаптив и анимации', 'Запуск и аналитика'] },
+            multi: { p: 85000, min: 14, max: 20, inc: ['CMS — правки без кода', 'Формы и интеграции', 'SEO-структура всех страниц', 'Запуск и обучение'] },
+            shop: { p: 145000, min: 20, max: 30, inc: ['Каталог и корзина', 'Онлайн-оплата, доставка', 'Интеграция склада и CRM', 'Обучение команды'] }
+        };
+        let curType = 'landing';
+        const priceEl = document.getElementById('calcPrice'),
+            daysEl = document.getElementById('calcDays'),
+            incEl = document.getElementById('calcIncludes'),
+            pagesGrp = document.getElementById('pagesGroup'),
+            pagesInp = document.getElementById('pages'),
+            pagesVal = document.getElementById('pagesVal'),
+            urgentCb = document.getElementById('urgent'),
+            extraBoxes = [...document.querySelectorAll('#calcExtras input[data-extra]')],
+            fmt = n => new Intl.NumberFormat('ru-RU').format(n) + ' ₽';
+
+        function paintRange() {
+            const pct = (pagesInp.value - pagesInp.min) / (pagesInp.max - pagesInp.min) * 100,
+                cs = getComputedStyle(document.documentElement),
+                blue = cs.getPropertyValue('--blue').trim() || '#2b4bff',
+                line = cs.getPropertyValue('--line').trim() || 'rgba(16,16,16,.14)';
+            pagesInp.style.background = `linear-gradient(to right, ${blue} ${pct}%, ${line} ${pct}%)`;
+        }
+        function calc() {
+            const cfg = BASE[curType];
+            let price = cfg.p, dMin = cfg.min, dMax = cfg.max;
+            const pages = +pagesInp.value;
+            let includes = [...cfg.inc];
+            if (curType === 'multi') {
+                const extra = Math.max(0, pages - 5);
+                price += extra * 6000;
+                dMin += Math.ceil(extra / 2);
+                dMax += Math.ceil(extra / 2);
+                includes.unshift(`До ${pages} страниц под ключ`);
+            }
+            extraBoxes.forEach(cb => { if (cb.checked) price += +cb.dataset.extra; });
+            if (urgentCb.checked) {
+                price = Math.round(price * 1.3 / 1000) * 1000;
+                dMin = Math.max(3, Math.round(dMin * .7));
+                dMax = Math.max(4, Math.round(dMax * .7));
+            }
+            priceEl.textContent = fmt(price);
+            priceEl.classList.remove('pulse'); void priceEl.offsetWidth; priceEl.classList.add('pulse');
+            daysEl.textContent = `${dMin}–${dMax} дней`;
+            incEl.innerHTML = includes.map(i => `<li>${i}</li>`).join('');
+        }
+        document.getElementById('typePills').addEventListener('click', e => {
+            const b = e.target.closest('.pill'); if (!b) return;
+            document.querySelectorAll('#typePills .pill').forEach(p => p.classList.remove('active'));
+            b.classList.add('active');
+            curType = b.dataset.type;
+            pagesGrp.classList.toggle('off', curType !== 'multi');
+            calc();
+        });
+        pagesInp.addEventListener('input', () => { pagesVal.textContent = pagesInp.value; paintRange(); calc(); });
+        extraBoxes.concat(urgentCb).forEach(cb => cb.addEventListener('change', calc));
+        paintRange(); calc();
+
+        /* ===== theme toggle ===== */
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            const d = document.documentElement.classList.toggle('dark');
+            try { localStorage.setItem('factura-theme', d ? 'dark' : 'light'); } catch (e) { }
+            paintRange();
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a2327dadbecd1d48',t:'MTc4NTM5NDg3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
