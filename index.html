@@ -45,6 +45,13 @@
                         <path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5 7 7 0 0 0 20.5 14.5z" />
                     </svg>
                 </button>
+                <button id="glowToggle" type="button" aria-label="Включить/выключить свечение у курсора" aria-pressed="true" title="Свечение у курсора">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <circle cx="12" cy="12" r="3.5"/>
+                        <circle class="halo" cx="12" cy="12" r="8" opacity=".45"/>
+                        <line class="strike" x1="4.5" y1="19.5" x2="19.5" y2="4.5"/>
+                    </svg>
+                </button>
                 <a href="#contact" class="btn btn-sm">Обсудить проект</a>
             </div>
         </div>
@@ -535,8 +542,7 @@
 
     <button id="toTop" aria-label="Наверх">↑</button>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
+<script>
         /* ===== progress bar / header / back-to-top / parallax ===== */
         const bar = document.getElementById('progress'),
             header = document.getElementById('header'),
@@ -703,13 +709,31 @@
     <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a2327dadbecd1d48',t:'MTc4NTM5NDg3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 
     <script>
-    /* ===== soft cursor glow ===== */
+    /* ===== soft cursor glow + toggle ===== */
     (function () {
-        if (!matchMedia('(pointer:fine)').matches) return;
+        if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
         if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (matchMedia('(max-width: 767px)').matches) return;
+
         const glow = document.createElement('div');
         glow.className = 'fx-el fx-glow';
         document.body.appendChild(glow);
+
+        const btn = document.getElementById('glowToggle');
+        let on = true;
+        try { on = localStorage.getItem('cursor-glow') !== 'off'; } catch (e) {}
+
+        function apply() {
+            glow.style.display = on ? 'block' : 'none';
+            if (btn) {
+                btn.classList.toggle('off', !on);
+                btn.setAttribute('aria-pressed', String(on));
+            }
+            try { localStorage.setItem('cursor-glow', on ? 'on' : 'off'); } catch (e) {}
+        }
+        if (btn) btn.addEventListener('click', () => { on = !on; apply(); });
+        apply();
+
         let mx = innerWidth / 2, my = innerHeight / 2, gx = mx, gy = my;
         addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, {passive: true});
         (function loop() {
@@ -719,6 +743,6 @@
         })();
     })();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a23545683bfd667f',t:'MTc4NTQyNDAyNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a23a5bc5dc4b4dbd',t:'MTc4NTQ3NzM3MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
