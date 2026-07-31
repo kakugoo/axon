@@ -281,6 +281,53 @@ header.scrolled {
     transform: rotate(14deg)
 }
 
+#glowToggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--ink);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    flex: none;
+    transition: border-color .3s, transform .3s, background-color .4s, color .4s
+}
+
+#glowToggle:hover {
+    border-color: var(--blue);
+    transform: rotate(-14deg)
+}
+
+#glowToggle .strike {
+    display: none
+}
+
+#glowToggle.off {
+    color: var(--muted)
+}
+
+#glowToggle.off .strike {
+    display: block
+}
+
+#glowToggle:not(.off) .halo {
+    transform-origin: 12px 12px;
+    animation: glowPulse 2.4s ease-in-out infinite
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: .45
+    }
+    50% {
+        transform: scale(1.18);
+        opacity: .18
+    }
+}
+
 #themeToggle svg {
     position: absolute;
     transition: transform .45s cubic-bezier(.2, .9, .3, 1.35), opacity .3s
@@ -1848,11 +1895,21 @@ html.dark .cmp.bad li {
 
 html.dark .fx-glow {
     width: 64px;
-    height: 64px;
+    height: 64  px;
     opacity: .8;
-    background: radial-gradient(circle, rgba(93, 123, 255, .9), transparent 65%)
+    background: radial-gradient(circle, rgba(93, 123, 255, .8), transparent 65%)
 }
 
+/* страховка: никакого свечения на мобильных/тач-устройствах */
 @media (hover: none), (pointer: coarse), (max-width: 767px) {
-    .fx-glow { display: none !important }
+    .fx-glow {
+        display: none !important
+    }
+}
+
+/* кнопка свечения не нужна там, где эффекта нет */
+@media (hover: none), (pointer: coarse), (max-width: 767px) {
+    #glowToggle {
+        display: none
+    }
 }
