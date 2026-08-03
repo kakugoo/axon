@@ -1913,3 +1913,43 @@ html.dark .fx-glow {
         display: none
     }
 }
+/* ---------- заглушка soon ---------- */
+.tile.soon,
+.tariff.soon {
+    position: relative;
+    overflow: hidden
+}
+
+.tile.soon::after,
+.tariff.soon::after {
+    content: 'soon';
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    border-radius: inherit;
+    background: rgba(250, 248, 243, .82);
+    background: color-mix(in srgb, var(--card) 80%, transparent);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 2.1rem;
+    color: var(--blue);
+    pointer-events: auto
+}
+
+html.dark .tile.soon::after,
+html.dark .tariff.soon::after {
+    background: rgba(30, 28, 22, .82);
+    background: color-mix(in srgb, var(--card) 80%, transparent)
+}
+
+/* заглушенные карточки не реагируют на hover */
+.tile.soon:hover,
+.tariff.soon:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--line)
+}
