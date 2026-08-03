@@ -117,7 +117,7 @@
                         </svg></span>
                     <h3>Лендинги</h3>
                     <p>Одностраничные сайты, где каждый экран ведёт к заявке: сильная структура, дизайн и скорость.</p>
-                    <div class="price">от 45 000 ₽ · 5-7 дней</div>
+                    <div class="price">от 35 000 ₽ · 5-7 дней</div>
                 </div>
                 <div class="tile reveal">
                     <span class="n">/02</span>
@@ -128,9 +128,9 @@
                         </svg></span>
                     <h3>Корпоративные сайты</h3>
                     <p>Многостраничные сайты компаний: услуги, кейсы, блог и структура, в которой легко расти.</p>
-                    <div class="price">от 85 000 ₽ · 10-14 дней</div>
+                    <div class="price">от 65 000 ₽ · 10-14 дней</div>
                 </div>
-                <div class="tile reveal">
+                <div class="tile soon reveal">
                     <span class="n">/03</span>
                     <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.8">
@@ -142,7 +142,7 @@
                     <p>Каталог, корзина, оплата и доставка. Интеграции со складом и CRM уже в базовой сборке.</p>
                     <div class="price">от 145 000 ₽ · 20-30 дней</div>
                 </div>
-                <div class="tile reveal">
+                <div class="tile soon reveal">
                     <span class="n">/04</span>
                     <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.8">
@@ -295,7 +295,7 @@
                         <div class="pills" id="typePills">
                             <button type="button" class="pill active" data-type="landing">Лендинг</button>
                             <button type="button" class="pill" data-type="multi">Многостраничный</button>
-                            <button type="button" class="pill" data-type="shop">E-commerce</button>
+                            <!-- E-commerce временно скрыт (soon) -->
                         </div>
                     </div>
                     <div class="calc-group off" id="pagesGroup">
@@ -320,7 +320,7 @@
                 </div>
                 <div class="calc-right">
                     <span class="calc-label">Ориентировочная стоимость</span>
-                    <div class="calc-price" id="calcPrice">45 000 ₽</div>
+                    <div class="calc-price" id="calcPrice">35 000 ₽</div>
                     <div class="calc-days">Срок: <b id="calcDays">5–7 дней</b></div>
                     <ul class="calc-includes" id="calcIncludes"></ul>
                     <a href="#contact" class="btn" id="calcCta">Обсудить проект ↗</a>
@@ -389,7 +389,7 @@
             <div class="price-grid">
                 <div class="tariff reveal">
                     <h3>Лендинг</h3>
-                    <div class="sum">45 000 ₽<small> /проект</small></div>
+                    <div class="sum">35 000 ₽<small> /проект</small></div>
                     <div class="tm">5-7 дней</div>
                     <ul>
                         <li>Прототип и структура под заявку</li>
@@ -403,18 +403,18 @@
                 <div class="tariff hot reveal">
                     <span class="badge">Выбирают чаще</span>
                     <h3>Многостраничный</h3>
-                    <div class="sum">85 000 ₽<small> /проект</small></div>
+                    <div class="sum">65 000 ₽<small> /проект</small></div>
                     <div class="tm">10-14 дней</div>
                     <ul>
                         <li>Всё из тарифа «Лендинг»</li>
                         <li>До 5 страниц в базе, дальше +6 000 ₽/стр</li>
-                        <li>CMS — правите сами, без разработчика</li>
+                        <li>Заявки с форм прилетают вам в Telegram и на почту</li>
                         <li>Анимации и микровзаимодействия</li>
                         <li>3 итерации правок</li>
                     </ul>
                     <a href="#contact" class="btn js-plan" data-plan="Многостраничный">Выбрать «Многостраничный»</a>
                 </div>
-                <div class="tariff reveal">
+                <div class="tariff soon reveal">
                     <h3>E-commerce</h3>
                     <div class="sum">145 000 ₽<small> /проект</small></div>
                     <div class="tm">20–30 дней</div>
@@ -640,8 +640,8 @@
 
         /* ===== CALCULATOR ===== */
         const BASE = {
-            landing: { p: 45000, min: 5, max: 7, inc: ['1 страница под ключ', 'Прототип и структура', 'Адаптив и анимации', 'Запуск и аналитика'] },
-            multi: { p: 85000, min: 10, max: 14, inc: ['CMS — правки без кода', 'Формы и интеграции', 'SEO-структура всех страниц', 'Запуск и обучение'] },
+            landing: { p: 35000, min: 5, max: 7, inc: ['1 страница под ключ', 'Прототип и структура', 'Адаптив и анимации', 'Запуск и аналитика'] },
+            multi: { p: 65000, min: 10, max: 14, inc: ['CMS — правки без кода', 'Формы и интеграции', 'SEO-структура всех страниц', 'Запуск и обучение'] },
             shop: { p: 145000, min: 20, max: 30, inc: ['Каталог и корзина', 'Онлайн-оплата, доставка', 'Интеграция склада и CRM', 'Обучение команды'] }
         };
         let curType = 'landing';
@@ -743,6 +743,6 @@
         })();
     })();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a23a5bc5dc4b4dbd',t:'MTc4NTQ3NzM3MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a23a5bc5dc4b4dbd',t:'MTc4NTQ3NzM3MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a23a966eee8b71af',t:'MTc4NTQ3OTc3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
