@@ -431,7 +431,7 @@ h1 {
 
 .collage .c2 {
     position: absolute;
-    width: 52%;
+    width: 64%;
     bottom: 4%;
     left: 0;
     transform: rotate(4deg);
@@ -1450,7 +1450,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .review:hover .ava {
-    transform: scale(1.1) rotate(-6deg)
+    transform: scale(1.1)
 }
 
 .review b {
@@ -1536,7 +1536,7 @@ details .ans {
 }
 
 .contact-info {
-    max-width: 780px;
+    max-width: 880px;
     margin-inline: auto;
     text-align: center
 }
@@ -1557,9 +1557,9 @@ details .ans {
 }
 
 .c-links a {
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
     border: 1px solid var(--line);
     border-radius: 14px;
     padding: 1rem 1.2rem;
@@ -1569,15 +1569,20 @@ details .ans {
     transition: border-color .25s
 }
 
-.c-links a span {
+.c-links a .lab {
     color: var(--muted);
     font-weight: 400;
     font-size: .82rem
 }
 
+.c-links a .val {
+    font-weight: 600
+}
+
 .c-links a .arr {
     transition: transform .3s;
-    color: var(--muted)
+    color: var(--muted);
+    font-size: .82rem
 }
 
 .c-links a:hover {
@@ -1859,6 +1864,15 @@ html.dark .cmp.bad li {
         grid-template-columns: 1fr
     }
 
+    .c-links a {
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: .2rem
+    }
+
+    .c-links a .lab {
+        grid-column: 1 / -1
+    }
+
     .hero-meta {
         flex-direction: column;
         gap: .7rem
@@ -1952,4 +1966,20 @@ html.dark .tariff.soon::after {
     transform: none;
     box-shadow: none;
     border-color: var(--line)
+}
+
+/* фото в аватарке отзыва: если файл есть — перекрывает инициалы */
+.review .ava {
+    position: relative;
+    overflow: hidden
+}
+
+.review .ava img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30% /* дефолт для всех фото; точный сдвиг — в HTML в style у img */
 }
